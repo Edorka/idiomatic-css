@@ -1,11 +1,11 @@
-# Principios para escribir CSS consistentes e idimomáticos
+# Principios para escribir CSS idiomático y consistente
 
 El siguiente documento perfila una guía de estilo razonable para el desarrollo de CSS.
-No se pretende ser preceptino y no pretendo imponer mis preferencias de estilo en el 
-código de otras personas. No obstante, estas directrices recomiendan energéticamente
-el use de pautas ya existentes, comunes y razonables.
+No pretendo ser preceptivo y no deseo imponer mis preferencias de estilo en el código 
+de otras personas. No obstante esta guía recomiendan enérgicamente el empleo de pautas 
+ya existentes, razonables y de sentido común.
 
-Este es un documento vivo y las nuevas ideas son siempre bienvenidas. Aportad por favor.
+Este es un documento vivo y las nuevas ideas son siempre bienvenidas. Por favor contribuya.
 
 
 ## Traducciones
@@ -35,23 +35,23 @@ Este es un documento vivo y las nuevas ideas son siempre bienvenidas. Aportad po
 
 > "Una parte de ser un buen administrador de un proyecto existoso es darse cuenta
 > de que escribir código para uno mismo es Una Mala Idea™. Si miles de personas usan
-> su código, entonces escriba tu código buscando la mayor claridad posible, no según 
+> su código, entonces escriba su código buscando la mayor claridad posible, no según 
 > sus preferencias personales sobre como ser ingenioso con la especificación" - Idan Gazit
 
 * Todo código en cualquier repositorio debe parecer escrito por una misma persona, 
   sin importar cuantos hayan contribuido.
-* Hacer cumplir estrictamente el estilo acordado.
-* De haber dudas, utilize pautas comunes ya existentes.
+* Haga cumplir estrictamente el estilo acordado.
+* De haber dudas, utilice pautas comunes ya existentes.
 
 
 <a name="whitespace"></a>
 ## 2. Espacios en blanco
 
 Solo debe existir un estilo a lo largo de las fuentes de su proyecto. Sea siempre consistente
-en el uso de los espacios en blanco. Use los espacios en blanco para mejorar la legibilidad.
+en el uso de los espacios en blanco. Uselos para mejorar la legibilidad.
 
 * _Nunca_ mezcle espacios y tabulaciones para indentar.
-* Elija entre indentaciones lógicas (espacios) o tabulaciones reales. Ciñase a esa elección 
+* Elija entre indentaciones lógicas (espacios) o tabulaciones reales. Cíñase a esa elección 
   siempre. (Preferentemente: espacios)
 * Si utiliza espacios, elija el número de carácteres por nivel de indentación.
   (Preferentemente: 4 espacios)
@@ -71,7 +71,7 @@ Es estilo de los comentarios debe ser simple y consistente en el mismo repositor
 
 * Situe los comentarios en una nueva linea sobre el objetivo.
 * Evite comentarios de fin de linea.
-* Ciña la longitud de linea a un máximo sensato, p.ej. 80 columnas.
+* Ciña la longitud de linea a un máximo razonable, p.ej. 80 columnas.
 * Utilice libremente los comentarios para dividir el código CSS en secciones concretas.
 * Use "sentence case" comments and consistent text indentation.
 
@@ -118,17 +118,17 @@ acordadas.
 <a name="format"></a>
 ## 4. Formato
 
-El formato elegido debe asegurar que ese código es: facil de leer; facil de
+El formato elegido debe asegurar que el código es: facil de leer; facil de
 comentar con claridad; minimiza las posibilidades es introducir errores
-accidentalmente; y que resulte útil en diffs y blames.
+accidentalmente; y facilita el hallazgo de diferencias y responsabilidades.
 
 1. Un selector concreto por linea en las reglas con multiples selectores.
-2. Un espacio único anterior a la llave de apertura del conjunto de reglas.
-3. Una delcaración por linea en bloque declarativo.
+2. Un solo espacio anterior a la llave de apertura del conjunto de reglas.
+3. Una delcaración por linea en bloque de declaraciones.
 4. Un nivel de indentacion por cada declaración.
-5. Un espacio únido después de los dos puntos de una declaración.
-6. Incluir siempre un punto y coma al final de la última declaración en un
-   bloque declarativo.
+5. Un solo espacio a continuación de los dos puntos de una declaración.
+6. Incluiya siempre un punto y coma al final de la última declaración en un
+   bloque de declaraciones.
 7. Situe la llave de cierre del conjunto de reglar es la misma columna que 
    el primer caracter del conjunto.
 8. Separe cada conjunto de reglas por una linea en blanco.
@@ -207,14 +207,15 @@ continuación.
   p.ej., `content: ""`.
 * Utilice siempre valores entrecomillados en los selectores, 
   p.ej., `input[type="checkout"]`.
-* _Cuando sea posible_, evite especifiar unodes para valores de 0, 
+* _Cuando sea posible_, evite especifiar unidades para valores de 0, 
   p.ej., `margin: 0`.
 
 ### Preprocesadores: consideraciones adicionales al formato
 
-Los diferentes preprocesadores CSS tienen diferentes características, funcionalidad
-, y sintaxis. Sus convenciones deben adaptase para acomodad las particularidades de
-cualquier preprocesador en uso. Las siguientes guias hacen referencia a Sass.
+Los diferentes preprocesadores CSS tienen diferentes características, funcionalidad,
+y sintaxis. Sus convenciones deben adaptase para acomodad las particularidades de
+cualquier preprocesador en uso. Las siguientes recomendaciones hacen referencia
+a Sass.
 
 * Limite el anidamiento a 1 nivel de profundidad. Reconsidere cualquier anidamiento 
   de más de 2 niveles. Estó evitará selectores CSS excesivamente especificicos.
@@ -243,7 +244,7 @@ cualquier preprocesador en uso. Las siguientes guias hacen referencia a Sass.
 <a name="naming"></a>
 ## 5. Denominación
 
-Usted no es un compilador/compresor humano, así que no intente ser uno.
+Usted no es un compilador/compresor humano, así que no intente serlo.
 
 Utilice nombres claros y previsibles para las clases HTML. elija una pauta de 
 denominación comprensible y consistente que tenga sentido en ambos ficheros HTML 
@@ -283,7 +284,7 @@ Un ejemplo de varias convenciones.
    ========================================================================== */
 
 /*
- * Example HTML:
+ * HTML del ejemplo:
  *
  * <div class="grid">
  *     <div class="cell cell-5"></div>
@@ -296,7 +297,7 @@ Un ejemplo de varias convenciones.
     height: 100%;
     /* Evita que las celdas inline-block se envuelvan */
     white-space: nowrap;
-    /* Remove inter-cell whitespace */
+    /* elimina espaciado entre celdas */
     font-size: 0;
 }
 
@@ -347,7 +348,7 @@ Un ejemplo de varias convenciones.
 La organización del código es una parte importante de cualquier repositorio CSS y
 crucial para repositorios grandes.
 
-* Separe de forma logica distintas piezas de código.
+* Separe de forma lógica distintas piezas de código.
 * Emplee ficheros separados (concadenados en el paso de construcción) para ayudar
   a dividor el código de distintos componentes.
 * Si está utilizando un preprocesador, abstraiga código frecuente a variables para 
@@ -357,7 +358,7 @@ crucial para repositorios grandes.
 <a name="build-and-deployment"></a>
 ## 8. Construcción y despliegue
 
-Los proyectos siempre pueden intentar incluir medios por los cuales el código sea
+Los proyectos siempre deben intentar incluir medios por los cuales el código sea
 verificado, probado, comprimido y versionado en preparacion para su uso en producción.
 Para esta tarea, [grunt](https://github.com/cowboy/grunt) de Ben Alman es una 
 excelente herramienta.
@@ -367,5 +368,5 @@ excelente herramienta.
 ## Agradecimientos
 
 Gracias a todos aquellos que han contribuido a 
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js). Ha sido una fuente de 
-inspiración, anotaciones y directrices
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js). Han sido fuente de inspiración, 
+referencia y guía.
